@@ -1,3 +1,0 @@
-/home/kuru/UFSC/Exercícios de CPP do Tarcísio/class05/build_debug/CMakeFiles/rebuild_cache.dir
-/home/kuru/UFSC/Exercícios de CPP do Tarcísio/class05/build_debug/CMakeFiles/edit_cache.dir
-/home/kuru/UFSC/Exercícios de CPP do Tarcísio/class05/build_debug/CMakeFiles/class05.dir

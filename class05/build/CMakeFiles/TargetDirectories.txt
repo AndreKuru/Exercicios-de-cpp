@@ -1,3 +1,3 @@
-/home/kuru/UFSC/Exercícios de CPP do Tarcísio/class05/build/CMakeFiles/rebuild_cache.dir
-/home/kuru/UFSC/Exercícios de CPP do Tarcísio/class05/build/CMakeFiles/edit_cache.dir
-/home/kuru/UFSC/Exercícios de CPP do Tarcísio/class05/build/CMakeFiles/class05.dir
+/home/gabriel/Programacao/Minicurso C++/Exercicios-de-cpp/class05/build/CMakeFiles/rebuild_cache.dir
+/home/gabriel/Programacao/Minicurso C++/Exercicios-de-cpp/class05/build/CMakeFiles/edit_cache.dir
+/home/gabriel/Programacao/Minicurso C++/Exercicios-de-cpp/class05/build/CMakeFiles/class05.dir

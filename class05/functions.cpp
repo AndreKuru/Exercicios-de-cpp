@@ -1,8 +1,7 @@
 #include "functions.h"
 #include "student.h"
 #include <sstream>
-
-constexpr auto N_STUDENTS = 3;
+#include <iostream>
 
 using namespace std::string_literals;
 
@@ -14,6 +13,12 @@ std::string ask_string(std::istream& in)
   return s;
 }
 
+std::string ask_string(std::istream& in, std::string question)
+{
+  std::cout << question << " ";
+  return ask_string(in);
+}
+
 int ask_int(std::istream& in)
 {
   auto buf = ""s;
@@ -23,7 +28,15 @@ int ask_int(std::istream& in)
   auto sttr = std::stringstream{buf};
   sttr >> value;
 
+  std::cout << "Value: " << value << std::endl;
+
   return value;
+}
+
+int ask_int(std::istream& in, std::string question)
+{
+  std::cout << question << " ";
+  return ask_int(in);
 }
 
 float ask_float(std::istream& in)
@@ -38,24 +51,60 @@ float ask_float(std::istream& in)
   return value;
 }
 
+float ask_float(std::istream& in, std::string question)
+{
+  std::cout << question << " ";
+  return ask_float(in);
+}
+
+school::Student read_student(std::istream& in)
+{
+  auto name = ask_string(in);
+  auto year = ask_int(in);
+  
+  std::vector<float> grades;
+  for (auto j = 0; j < 3; ++j) {
+    grades.push_back(ask_float(in));
+  }
+
+  return school::Student(name, year, grades);
+}
+
+school::Student read_student_cli(std::istream& in)
+{
+  auto name = ask_string(in, "Nome do estudante: ");
+  auto year = ask_int(in, "Ano de mátricula: ");
+  
+  std::vector<float> grades;
+  for (auto j = 0; j < 3; ++j) {
+    grades.push_back(ask_float(in, "Nota: "));
+  }
+
+  return school::Student(name, year, grades);
+}
+
 namespace school {
-
-
 
 std::vector<Student> read_students(std::istream& in)
 {
-  auto number_students = ask_int(in);
-
   std::vector<Student> students;
 
-  for (auto i = 0; i < number_students; ++i) {
-    auto name = ask_string(in);
-    auto year = ask_int(in);
-    std::vector<float> grades;
-    for (auto j = 0; j < 3; ++j) {
-      grades.push_back(ask_float(in));
+  if (dynamic_cast<std::ifstream*>(&in) != nullptr) {
+    auto number_students = ask_int(in);
+    
+    for (auto i = 0; i < number_students; ++i) {
+      auto student = read_student(in);
+      students.push_back(student);
     }
-    students.push_back(Student(name, year, grades));
+
+    return students;
+  }
+
+  auto number_students = ask_int(in, "Número de estudantes: ");
+
+  for (auto i = 0; i < number_students; ++i) {
+    auto student = read_student_cli(in);
+    students.push_back(student);
   }
 
   return students;

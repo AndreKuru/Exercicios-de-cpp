@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/class05.dir/functions.cpp.o CMakeFiles/class05.dir/main.cpp.o CMakeFiles/class05.dir/student.cpp.o -o class05 
+/usr/bin/c++     CMakeFiles/class05.dir/functions.cpp.o CMakeFiles/class05.dir/main.cpp.o CMakeFiles/class05.dir/student.cpp.o  -o class05 
