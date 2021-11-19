@@ -1,3 +1,0 @@
-/home/gabriel/Programacao/Minicurso C++/Exercicios-de-cpp/class05/build/CMakeFiles/rebuild_cache.dir
-/home/gabriel/Programacao/Minicurso C++/Exercicios-de-cpp/class05/build/CMakeFiles/edit_cache.dir
-/home/gabriel/Programacao/Minicurso C++/Exercicios-de-cpp/class05/build/CMakeFiles/class05.dir
